@@ -108,15 +108,29 @@ def _render_bucket(
 
 
 def _render_footer(console: Console, findings: list[Finding]) -> None:
-    total = len(findings)
+    # Exclude "unknown" from scoring: these are typically monorepo or private
+    # packages that npm has never heard of, not actual rot.
+    scored = [f for f in findings if f.status != "unknown"]
+    total = len(scored)
     if total == 0:
         return
 
-    healthy = sum(1 for f in findings if f.status == "healthy")
-    score = round(10 * healthy / total)
+    healthy = sum(1 for f in scored if f.status == "healthy")
+    problems = total - healthy
+
+    raw_score = 10 * healthy / total
+    score = round(raw_score, 1)
+    # A project with any problems should never display a perfect 10.0.
+    if problems > 0 and score >= 10.0:
+        score = 9.9
 
     console.print("─" * 40)
     color = "green" if score >= 8 else "yellow" if score >= 5 else "red"
-    console.print(f"[bold]📊 Project health:[/bold] [{color}]{score}/10[/{color}]")
-    console.print(f"[dim]   {healthy}/{total} dependencies are healthy.[/dim]")
+    score_str = f"{score:.1f}" if score < 10 else "10"
+    console.print(f"[bold]📊 Project health:[/bold] [{color}]{score_str}/10[/{color}]")
+    summary = f"{healthy}/{total} dependencies are healthy"
+    if len(findings) != total:
+        skipped = len(findings) - total
+        summary += f" ({skipped} unknown packages excluded)"
+    console.print(f"[dim]   {summary}.[/dim]")
     console.print()
