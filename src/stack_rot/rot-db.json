@@ -47,24 +47,7 @@
       "verified_by": "founder",
       "verified_date": "2026-05-19"
     },
-    "gulp": {
-      "ecosystem": "npm",
-      "status": "stale",
-      "reason": "Last major release was Gulp 4 in 2018. Ecosystem moved to npm scripts, Vite, esbuild, and modern bundlers for task running.",
-      "alternatives": ["npm-scripts", "vite", "esbuild", "turbo"],
-      "evidence": "https://github.com/gulpjs/gulp/releases",
-      "verified_by": "founder",
-      "verified_date": "2026-05-19"
-    },
-    "grunt": {
-      "ecosystem": "npm",
-      "status": "stale",
-      "reason": "Effectively unmaintained. Community moved to npm scripts and modern task runners years ago.",
-      "alternatives": ["npm-scripts", "vite", "esbuild"],
-      "evidence": "https://github.com/gruntjs/grunt/graphs/contributors",
-      "verified_by": "founder",
-      "verified_date": "2026-05-19"
-    },
+    
     "coffee-script": {
       "ecosystem": "npm",
       "status": "deprecated",
