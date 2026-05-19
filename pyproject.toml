@@ -45,3 +45,9 @@ dev = [
 [build-system]
 requires = ["uv_build>=0.11,<0.13"]
 build-backend = "uv_build"
+
+
+[tool.uv.build-backend]
+module-name = "stack_rot"
+module-root = "src"
+source-include = ["src/stack_rot/rot-db.json"]

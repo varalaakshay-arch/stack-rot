@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.1",
+  "last_updated": "2026-05-19",
+  "packages": {
+    "moment": {
+      "ecosystem": "npm",
+      "status": "dead",
+      "reason": "In maintenance mode since 2020. Maintainers officially recommend alternatives. Large bundle size and mutable API made the community move on.",
+      "alternatives": ["dayjs", "date-fns", "luxon"],
+      "evidence": "https://momentjs.com/docs/#/-project-status/",
+      "verified_by": "founder",
+      "verified_date": "2026-05-19"
+    },
+    "request": {
+      "ecosystem": "npm",
+      "status": "deprecated",
+      "reason": "Officially deprecated by maintainers in February 2020. No longer accepting issues or PRs.",
+      "alternatives": ["axios", "undici", "node-fetch", "got"],
+      "evidence": "https://github.com/request/request/issues/3142",
+      "verified_by": "founder",
+      "verified_date": "2026-05-19"
+    },
+    "node-sass": {
+      "ecosystem": "npm",
+      "status": "deprecated",
+      "reason": "LibSass and node-sass were deprecated in October 2020. The Sass team recommends Dart Sass for all new projects.",
+      "alternatives": ["sass"],
+      "evidence": "https://sass-lang.com/blog/libsass-is-deprecated/",
+      "verified_by": "founder",
+      "verified_date": "2026-05-19"
+    },
+    "tslint": {
+      "ecosystem": "npm",
+      "status": "deprecated",
+      "reason": "Deprecated by Palantir in 2019. The TypeScript team adopted ESLint as the recommended linter.",
+      "alternatives": ["eslint", "@typescript-eslint/eslint-plugin", "biome"],
+      "evidence": "https://github.com/palantir/tslint/issues/4534",
+      "verified_by": "founder",
+      "verified_date": "2026-05-19"
+    },
+    "bower": {
+      "ecosystem": "npm",
+      "status": "deprecated",
+      "reason": "Maintainers deprecated Bower in 2017 in favor of Yarn and Webpack-based workflows.",
+      "alternatives": ["npm", "yarn", "pnpm"],
+      "evidence": "https://bower.io/blog/2017/how-to-migrate-away-from-bower/",
+      "verified_by": "founder",
+      "verified_date": "2026-05-19"
+    },
+    "gulp": {
+      "ecosystem": "npm",
+      "status": "stale",
+      "reason": "Last major release was Gulp 4 in 2018. Ecosystem moved to npm scripts, Vite, esbuild, and modern bundlers for task running.",
+      "alternatives": ["npm-scripts", "vite", "esbuild", "turbo"],
+      "evidence": "https://github.com/gulpjs/gulp/releases",
+      "verified_by": "founder",
+      "verified_date": "2026-05-19"
+    },
+    "grunt": {
+      "ecosystem": "npm",
+      "status": "stale",
+      "reason": "Effectively unmaintained. Community moved to npm scripts and modern task runners years ago.",
+      "alternatives": ["npm-scripts", "vite", "esbuild"],
+      "evidence": "https://github.com/gruntjs/grunt/graphs/contributors",
+      "verified_by": "founder",
+      "verified_date": "2026-05-19"
+    },
+    "coffee-script": {
+      "ecosystem": "npm",
+      "status": "deprecated",
+      "reason": "Renamed to coffeescript (no hyphen). The hyphenated package is the old deprecated name.",
+      "alternatives": ["coffeescript", "typescript"],
+      "evidence": "https://www.npmjs.com/package/coffee-script",
+      "verified_by": "founder",
+      "verified_date": "2026-05-19"
+    },
+    "phantomjs": {
+      "ecosystem": "npm",
+      "status": "deprecated",
+      "reason": "Development suspended in 2018. Headless Chrome and Puppeteer replaced it for browser automation.",
+      "alternatives": ["puppeteer", "playwright"],
+      "evidence": "https://github.com/ariya/phantomjs/issues/15344",
+      "verified_by": "founder",
+      "verified_date": "2026-05-19"
+    },
+    "phantomjs-prebuilt": {
+      "ecosystem": "npm",
+      "status": "deprecated",
+      "reason": "Companion to PhantomJS, which was sunset in 2018.",
+      "alternatives": ["puppeteer", "playwright"],
+      "evidence": "https://github.com/ariya/phantomjs/issues/15344",
+      "verified_by": "founder",
+      "verified_date": "2026-05-19"
+    }
+  }
+}
